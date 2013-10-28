@@ -5,3 +5,5 @@ Disallow: /contact_form/
 Disallow: /images/
 Disallow: /img/
 Disallow: /phpmailer/
+Disallow: /mail.php
+Disallow: /README.md

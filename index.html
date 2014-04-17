@@ -226,7 +226,7 @@
 						</div>
 						<div class="span5">
 							<h2 class="title">Get in touch!</h2>
-							<form action="#" method="post">
+							<form method="POST" name="contactform" action="contact-form-handler.php">
 								<input type="text" name="name" id="name" value="Name" onFocus="if (this.value == 'Name') this.value = '';" onBlur="if (this.value == '') this.value = 'Name';" />
 								<input type="text" name="email" id="email" value="Email" onFocus="if (this.value == 'Email') this.value = '';" onBlur="if (this.value == '') this.value = 'Email';" />
 								<textarea name="message" id="message" onFocus="if (this.value == 'Message') this.value = '';" onBlur="if (this.value == '') this.value = 'Message';" >Message</textarea>
@@ -234,6 +234,19 @@
 								<input type="submit" class="contact_btn" value="Send" />
 								<div class="clear"></div>
 							</form>
+							<script language="JavaScript">
+// Code for validating the form
+// Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
+// for details
+var frmvalidator  = new Validator("contactform");
+frmvalidator.addValidation("name","req","Please provide your name"); 
+frmvalidator.addValidation("email","req","Please provide your email"); 
+frmvalidator.addValidation("email","email","Please enter a valid email address"); 
+</script>
+<!--
+Sample code from:
+http://www.html-form-guide.com/contact-form/php-email-contact-form.html
+-->
 						</div>
 					</div>
 				</div>
